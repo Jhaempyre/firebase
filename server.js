@@ -1,11 +1,11 @@
-import { log } from 'console';
+//import { log } from 'console';
 import express from 'express'
 import path from 'path';
 
 const app = express()
 const PORT = process.env.PORT || 3000;
 
-const directoryPath = 'C:\\Users\\Jhaas\\server\\src';
+const directoryPath = 'C:\\Users\\Jhaas\\firebase\\src';
 
 app.use(express.static(path.join(directoryPath)))
 app.get('/',(req,res) => {
