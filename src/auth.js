@@ -19,14 +19,14 @@ const firebaseConfig = {
   const auth = getAuth(app);
   auth.languageCode = 'en'
 
-  const Google_Login = document.getElementById('gooh')
+  const Google_Login = document.getElementById('god')
   Google_Login.addEventListener("click",function(){
     signInWithPopup(auth, provider)
   .then((result) => {
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     const user = result.user;
-    //window.location.href= "../login.html"
+    window.location.href= "../login.html"
     console.log(result);
   }).catch((error) => {
     const errorCode = error.code;
